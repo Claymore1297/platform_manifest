@@ -7,6 +7,11 @@
            revision="refs/heads/t13.0"
            sync-j="8" />
 
+  <remote  name="aicpul"
+           fetch="https://git@github.com/"
+           revision="refs/heads/t13.0"
+           sync-j="8" />
+  
   <remote  name="lineage"
            fetch="https://git@github.com/"
            review="review.lineageos.org"
@@ -42,7 +47,7 @@
   <project path="frameworks/opt/slimrecent" name="AICP/frameworks_opt_slimrecent" remote="aicp" />
   <project path="packages/apps/AicpExtras" name="AICP/packages_apps_AicpExtras" remote="aicp" />
   <project path="packages/services/OmniJaws" name="AICP/packages_services_OmniJaws" remote="aicp" />
-  <project path="vendor/aicp" name="AICP/vendor_aicp" remote="aicp" />
+  <project path="vendor/aicp" name="AICP-UL/vendor_aicp" remote="aicpul" />
 
   <!-- AICP AOSP Repos -->
   <project path="build/make" name="AICP/build" groups="pdk" remote="aicp" >
@@ -58,13 +63,13 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="bionic" name="AICP/bionic" groups="pdk" remote="aicp" />
+  <project path="bionic" name="AICP-UL/bionic" groups="pdk" remote="aicpul" />
   <project path="bootable/recovery" name="AICP/bootable_recovery" groups="pdk" remote="aicp" />
-  <project path="frameworks/av" name="AICP/frameworks_av" remote="aicp" />
-  <project path="frameworks/base" name="AICP/frameworks_base" remote="aicp" />
-  <project path="frameworks/libs/net" name="AICP/frameworks_libs_net" groups="pdk-cw-fs,pdk-fs" remote="aicp" />
+  <project path="frameworks/av" name="AICP-UL/frameworks_av" remote="aicpul" />
+  <project path="frameworks/base" name="AICP-UL/frameworks_base" remote="aicpul" />
+  <project path="frameworks/libs/net" name="AICP-UL/frameworks_libs_net" groups="pdk-cw-fs,pdk-fs" remote="aicpul" />
   <project path="frameworks/libs/systemui" name="AICP/frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" remote="aicp" />
-  <project path="frameworks/native" name="AICP/frameworks_native" groups="pdk" remote="aicp" />
+  <project path="frameworks/native" name="AICP-UL/frameworks_native" groups="pdk" remote="aicpul" />
   <!--<project path="external/pulse" name="AICP/external_pulse" groups="pdk" remote="aicp" />-->
   <project path="packages/apps/Contacts" name="AICP/packages_apps_Contacts" groups="pdk-cw-fs,pdk-fs" remote="aicp" />
   <project path="packages/apps/Dialer" name="AICP/packages_apps_Dialer" remote="aicp" />
@@ -81,18 +86,18 @@
   <project path="packages/apps/ThemePicker" name="AICP/packages_apps_ThemePicker" groups="pdk-fs" remote="aicp" />
   <project path="packages/apps/TilesWallpaper" name="AICP/packages_apps_TilesWallpaper" remote="aicp" />
   <project path="packages/modules/Bluetooth" name="AICP/packages_modules_Bluetooth" groups="pdk" remote="aicp" />
-  <project path="packages/modules/Connectivity" name="AICP/packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="aicp" />
+  <project path="packages/modules/Connectivity" name="AICP-UL/packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="aicpul" />
   <project path="packages/modules/DnsResolver" name="AICP/packages_modules_DnsResolver" groups="pdk-cw-fs,pdk-fs" remote="aicp" />
   <project path="packages/modules/Permission" name="AICP/packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="aicp" />
   <project path="packages/overlays/AICP" name="AICP/packages_overlays_AICP" remote="aicp" />
   <project path="packages/services/Telecomm" name="AICP/packages_services_Telecomm" remote="aicp" />
   <project path="packages/resources/deviceparts" name="AICP/packages_resources_deviceparts" remote="aicp" />
   <project path="packages/resources/devicesettings" name="AICP/packages_resources_devicesettings" remote="aicp" />
-  <project path="platform_manifest" name="AICP/platform_manifest" remote="aicp" />
+  <project path="platform_manifest" name="AICP-UL/platform_manifest" remote="aicpul" />
   <!--<project path="prebuilts/clang/host/linux-x86_custom" name="AICP/prebuilts_clang_host_linux-x86" remote="aicp" revision="master" clone-depth="1" />-->
-  <project path="system/core" name="AICP/system_core" groups="pdk" remote="aicp" />
+  <project path="system/core" name="AICP-UL/system_core" groups="pdk" remote="aicpul" />
   <!--<project path="system/netd" name="AICP/system_netd" groups="pdk" remote="aicp" />-->
-  <project path="system/sepolicy" name="AICP/system_sepolicy" groups="pdk" remote="aicp" />
+  <project path="system/sepolicy" name="AICP-UL/system_sepolicy" groups="pdk" remote="aicpul" />
 
   <!-- AICP CAF Repos -->
   <project path="hardware/qcom-caf/msm8960/audio" name="AICP/hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="s12.1-caf-8960" remote="aicp" />
@@ -102,7 +107,7 @@
   <project path="hardware/qcom-caf/msm8974/display" name="AICP/hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="s12.1-caf-8974" remote="aicp" />
   <project path="hardware/qcom-caf/msm8974/media" name="AICP/hardware_qcom_media" groups="qcom,pdk-qcom" revision="s12.1-caf-8974" remote="aicp" />
   <project path="hardware/qcom-caf/msm8994/audio" name="AICP/hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="s12.1-caf-8994" remote="aicp" />
-  <project path="hardware/qcom-caf/msm8994/display" name="AICP/hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="s12.1-caf-8994" remote="aicp" />
+  <project path="hardware/qcom-caf/msm8994/display" name="AICP-UL/hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="s12.1-caf-8994" remote="aicpul" />
   <project path="hardware/qcom-caf/msm8994/media" name="AICP/hardware_qcom_media" groups="qcom,pdk-qcom" revision="s12.1-caf-8994" remote="aicp" />
 
   <!-- Other additions -->
