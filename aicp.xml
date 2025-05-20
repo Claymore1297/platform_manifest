@@ -43,7 +43,7 @@
   <!-- <project path="frameworks/opt/slimrecent" name="AICP/frameworks_opt_slimrecent" remote="aicp" /> -->
   <project path="vendor/aicp-apps/AicpExtras" name="AICP/packages_apps_AicpExtras" remote="aicp" />
   <!-- <project path="packages/services/OmniJaws" name="AICP/packages_services_OmniJaws" remote="aicp" /> -->
-  <project path="vendor/aicp" name="GeoZac/vendor_aicp" remote="aicp" />
+  <project path="vendor/aicp" name="AICP/vendor_aicp" remote="aicp" />
 
   <!-- AICP AOSP Repos -->
   <project path="build/make" name="AICP/build" groups="pdk,sysui-studio" remote="aicp" >
