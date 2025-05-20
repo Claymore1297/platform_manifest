@@ -46,7 +46,7 @@
   <project path="vendor/aicp" name="GeoZac/vendor_aicp" remote="aicp" />
 
   <!-- AICP AOSP Repos -->
-  <project path="build/make" name="GeoZac/build_make" groups="pdk,sysui-studio" remote="aicp" >
+  <project path="build/make" name="AICP/build" groups="pdk,sysui-studio" remote="aicp" >
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
     <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
     <linkfile dest="build/core" src="core" />
@@ -54,7 +54,7 @@
     <linkfile dest="build/target" src="target" />
     <linkfile dest="build/tools" src="tools" />
   </project>
-  <project path="build/soong" name="GeoZac/build_soong" groups="pdk,tradefed" remote="aicp" >
+  <project path="build/soong" name="AICP/build_soong" groups="pdk,tradefed" remote="aicp" >
     <linkfile dest="Android.bp" src="root.bp" />
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
   </project>
